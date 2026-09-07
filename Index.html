@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sistem Pemantauan Projek</title>
+    <meta name="theme-color" content="#0b1020">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-512.png">
+    <link rel="apple-touch-icon" href="icon-512.png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0b1020;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- GANTIKAN URL DI BAWAH DENGAN PAUTAN WEB APP ANDA -->
+    <iframe src="https://script.google.com/macros/s/MASUKKAN_ID_WEB_APP_ANDA/exec" allowfullscreen></iframe>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('Service Worker berjaya didaftarkan dengan skop:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Pendaftaran Service Worker gagal:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
