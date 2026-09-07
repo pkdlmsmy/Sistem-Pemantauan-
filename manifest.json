@@ -1,6 +1,6 @@
 {
-  "name": "Sistem Pemantauan Projek PKDLMS",
-  "short_name": "SPP PKDLMS",
+  "name": "Sistem Pemantauan PKDLMS",
+  "short_name": "Pemantauan PKDLMS",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0b1020",
